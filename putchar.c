@@ -13,3 +13,4 @@ int _putchar(char charctr)
 	i = write(1, &charctr, 1);
 	return (i);
 }
+

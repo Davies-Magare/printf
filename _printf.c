@@ -34,3 +34,4 @@ int _printf(const char *format, ...)
 		va_end(num);
 		return (i + char_ct);
 }
+
