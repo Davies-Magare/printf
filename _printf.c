@@ -23,13 +23,15 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i += 1;
-			if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
-				char_ct += print_char_string(format[i], num);
+			char_ct += print_char_string(format[i], num);
 		}
 		else
+		{
 			_putchar(format[i]);
+			char_ct += 1;
+		}
 		i += 1;
 	}
 	va_end(num);
-	return (i + char_ct);
+	return (char_ct);
 }
