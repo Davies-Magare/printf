@@ -12,7 +12,7 @@
 int print_char_string(char c, va_list num)
 {
 	char *string;
-	int letter, j;
+	int letter;
 	int number, result_ct;
 
 	result_ct = 0;
@@ -25,16 +25,7 @@ int print_char_string(char c, va_list num)
 			break;
 		case 's':
 			string = va_arg(num, char *);
-			j = 0;
-			if (string != NULL)
-			{
-				while (string[j] != '\0')
-				{
-					_putchar(string[j]);
-					j++;
-				}
-			}
-			result_ct = j;
+			result_ct = print_string(string);
 			break;
 		case '%':
 			_putchar('%');
@@ -44,6 +35,10 @@ int print_char_string(char c, va_list num)
 		case 'i':
 			number = va_arg(num, int);
 			result_ct = print_numbers(number);
+			break;
+		case 'b':
+			number = va_arg(num, int);
+			result_ct = decimal_to_binary(number);
 			break;
 	}
 	return (result_ct);
