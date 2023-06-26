@@ -38,7 +38,7 @@ int print_char_string(char c, va_list num)
 			break;
 		case 'b':
 			number = va_arg(num, int);
-			result_ct = decimal_to_binary(number);
+			result_ct = decimal_to_binary(_abs(number));
 			break;
 	}
 	return (result_ct);

@@ -11,8 +11,6 @@ int decimal_to_binary(int number)
 {
 	int i, count, array[20];
 
-	if (number < 0)
-		return (0);
 	count = 0;
 	i = 0;
 	while (number > 0)
