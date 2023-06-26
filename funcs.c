@@ -14,6 +14,7 @@ int print_char_string(char c, va_list num)
 	char *string;
 	int letter;
 	int number, result_ct;
+	unsigned int bin;
 
 	result_ct = 0;
 	switch (c)
@@ -37,8 +38,8 @@ int print_char_string(char c, va_list num)
 			result_ct = print_numbers(number);
 			break;
 		case 'b':
-			number = va_arg(num, int);
-			result_ct = decimal_to_binary(_abs(number));
+			bin = va_arg(num, int);
+			result_ct = decimal_to_binary(bin);
 			break;
 	}
 	return (result_ct);
