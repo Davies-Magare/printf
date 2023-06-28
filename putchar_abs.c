@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <limits.h>
 
 /**
  * _putchar - prints a character
